@@ -17,6 +17,6 @@ describe NullAndVoid::NullObject do
   end
 
   it 'is falsifiable' do
-    null_object.should be_a NullAndVoid::Falsification
+    null_object.should be_a NullAndVoid::Falsifiable
   end
 end

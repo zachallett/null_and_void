@@ -1,11 +1,11 @@
 require 'rspectacular'
-require 'null_and_void/falsification'
+require 'null_and_void/falsifiable'
 
 class NullObject
-  include NullAndVoid::Falsification
+  include NullAndVoid::Falsifiable
 end
 
-describe NullAndVoid::Falsification do
+describe NullAndVoid::Falsifiable do
   let(:null_object) { NullObject.new }
 
   it 'can be double inverted to be false' do
