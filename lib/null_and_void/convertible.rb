@@ -23,5 +23,9 @@ module NullAndVoid
     def to_hash
       Hash.new
     end
+
+    def to_html
+      ''
+    end
   end
 end
