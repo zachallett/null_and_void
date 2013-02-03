@@ -5,5 +5,9 @@ module NullAndVoid
     end
 
     alias :to_int :to_i
+
+    def to_f
+      0.0
+    end
   end
 end
