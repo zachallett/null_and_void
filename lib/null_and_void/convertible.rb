@@ -35,5 +35,9 @@ module NullAndVoid
     def to_xml
       ''
     end
+
+    def to_s
+      ''
+    end
   end
 end
