@@ -19,5 +19,9 @@ module NullAndVoid
     end
 
     alias :to_ary :to_a
+
+    def to_hash
+      Hash.new
+    end
   end
 end
