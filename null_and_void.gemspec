@@ -27,4 +27,7 @@ Gem::Specification.new do |gem|
   gem.files             = Dir['{app,config,db,lib}/**/*'] + %w{Rakefile README.md}
   gem.test_files        = Dir['{test,spec,features}/**/*']
   gem.require_paths     = ['lib']
+
+  gem.add_development_dependency              'rspec',              '~> 2.12'
+  gem.add_development_dependency              'rspectacular',       '~> 0.7'
 end
