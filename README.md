@@ -143,7 +143,7 @@ end
 ### Include Into Your Objects (optional) ######################################
 
 You can add Null Object creation to your class by including
-`NullAndVoid::Helpers`.
+`NullAndVoid::ModelSupport`.
 
 ```ruby
 class User
