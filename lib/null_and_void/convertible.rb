@@ -27,5 +27,9 @@ module NullAndVoid
     def to_html
       ''
     end
+
+    def to_json
+      ''
+    end
   end
 end

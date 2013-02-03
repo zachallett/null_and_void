@@ -38,4 +38,8 @@ describe NullAndVoid::Convertible do
   it 'is an empty String when the attempt is made to convert it to HTML' do
     null_object.to_html.should eql ''
   end
+
+  it 'is an empty String when the attempt is made to convert it to JSON' do
+    null_object.to_json.should eql ''
+  end
 end
