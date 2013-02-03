@@ -4,6 +4,10 @@ module NullAndVoid
       true
     end
 
+    def nil?
+      true
+    end
+
     def present?
       false
     end
