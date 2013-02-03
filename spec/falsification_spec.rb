@@ -11,4 +11,8 @@ describe NullAndVoid::Falsification do
   it 'is blank' do
     null_object.should be_blank
   end
+
+  it 'is not present' do
+    null_object.should_not be_present
+  end
 end

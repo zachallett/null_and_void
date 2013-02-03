@@ -3,5 +3,9 @@ module NullAndVoid
     def blank?
       true
     end
+
+    def present?
+      false
+    end
   end
 end
