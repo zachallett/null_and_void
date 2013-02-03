@@ -11,5 +11,8 @@ describe NullAndVoid::Convertible do
   it 'is zero when the attempt is made to convert it to an Integer' do
     null_object.to_i.should be_an Integer
     null_object.to_i.should be_zero
+
+    null_object.to_int.should be_an Integer
+    null_object.to_int.should be_zero
   end
 end
