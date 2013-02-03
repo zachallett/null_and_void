@@ -8,7 +8,7 @@ describe NullAndVoid::NullObject do
     null_object == NullAndVoid::NullObject.instance
   end
 
-  it 'returns itself for all unknown method calls' do
-    null_object.foobar.should eql null_object
+  it 'is stubbable' do
+    null_object.should be_a NullAndVoid::Stubbable
   end
 end

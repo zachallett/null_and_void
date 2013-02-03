@@ -1,11 +1,9 @@
 require 'singleton'
+require 'null_and_void/stubbable'
 
 module NullAndVoid
   class NullObject
     include Singleton
-
-    def method_missing(*args, &block)
-      self
-    end
+    include Stubbable
   end
 end
