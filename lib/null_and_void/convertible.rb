@@ -9,5 +9,9 @@ module NullAndVoid
     def to_f
       0.0
     end
+
+    def to_r
+      Rational(0)
+    end
   end
 end

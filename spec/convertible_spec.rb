@@ -20,4 +20,9 @@ describe NullAndVoid::Convertible do
     null_object.to_f.should be_a Float
     null_object.to_f.should be_zero
   end
+
+  it 'is zero when the attempt is made to convert it to a Rational' do
+    null_object.to_r.should be_a Rational
+    null_object.to_r.should be_zero
+  end
 end
