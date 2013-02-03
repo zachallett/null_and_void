@@ -11,4 +11,8 @@ describe NullAndVoid::NullObject do
   it 'is stubbable' do
     null_object.should be_a NullAndVoid::Stubbable
   end
+
+  it 'is convertible' do
+    null_object.should be_a NullAndVoid::Convertible
+  end
 end
