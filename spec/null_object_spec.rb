@@ -15,4 +15,8 @@ describe NullAndVoid::NullObject do
   it 'is convertible' do
     null_object.should be_a NullAndVoid::Convertible
   end
+
+  it 'is falsifiable' do
+    null_object.should be_a NullAndVoid::Falsification
+  end
 end
