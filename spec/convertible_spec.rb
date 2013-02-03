@@ -5,6 +5,13 @@ module FooBar
   class NullObject
     include NullAndVoid::Convertible
   end
+
+  class NullBaz
+    include NullAndVoid::Convertible
+  end
+
+  class Object
+  end
 end
 
 describe NullAndVoid::Convertible do
@@ -51,5 +58,13 @@ describe NullAndVoid::Convertible do
 
   it 'is an empty String when the attempt is made to convert it to a String' do
     null_object.to_s.should eql ''
+  end
+
+  it 'is the class the Null Object is based on when the attempt is made to convert it to a value object' do
+    null_object.to_model.should be_a FooBar::Object
+  end
+
+  it 'raises an error if the model the Null Object is based on does not exist' do
+    expect { FooBar::NullBaz.new.to_model }.to raise_error NameError
   end
 end

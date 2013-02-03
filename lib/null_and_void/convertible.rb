@@ -1,3 +1,5 @@
+require 'active_support/inflector/methods'
+
 module NullAndVoid
   module Convertible
     def to_i
@@ -38,6 +40,15 @@ module NullAndVoid
 
     def to_s
       ''
+    end
+
+    def to_model
+      base_path         = ActiveSupport::Inflector.demodulize(self.class.name)
+      module_path       = ActiveSupport::Inflector.deconstantize(self.class.name)
+      source_model      = base_path.gsub(/^Null/, '')
+      source_model_path = "#{module_path}::#{source_model}"
+
+      ActiveSupport::Inflector.constantize(source_model_path).new
     end
   end
 end
