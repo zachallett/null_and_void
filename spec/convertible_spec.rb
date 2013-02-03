@@ -42,4 +42,8 @@ describe NullAndVoid::Convertible do
   it 'is an empty String when the attempt is made to convert it to JSON' do
     null_object.to_json.should eql ''
   end
+
+  it 'is an empty String when the attempt is made to convert it to XML' do
+    null_object.to_xml.should eql ''
+  end
 end

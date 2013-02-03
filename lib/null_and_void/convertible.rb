@@ -31,5 +31,9 @@ module NullAndVoid
     def to_json
       ''
     end
+
+    def to_xml
+      ''
+    end
   end
 end
