@@ -27,6 +27,7 @@ describe NullAndVoid::Convertible do
   end
 
   it 'is an empty Array when the attempt is made to convert it to an Array' do
-    null_object.to_a.should eql []
+    null_object.to_a.should   eql []
+    null_object.to_ary.should eql []
   end
 end

@@ -17,5 +17,7 @@ module NullAndVoid
     def to_a
       Array.new
     end
+
+    alias :to_ary :to_a
   end
 end
