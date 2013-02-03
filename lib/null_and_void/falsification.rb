@@ -1,5 +1,9 @@
 module NullAndVoid
   module Falsification
+    def !
+      true
+    end
+
     def blank?
       true
     end
