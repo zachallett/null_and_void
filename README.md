@@ -147,7 +147,7 @@ You can add Null Object creation to your class by including
 
 ```ruby
 class User
-  include NullAndVoid::Helpers
+  include NullAndVoid::ModelSupport
 
   def admin?
     type == 'admin'
