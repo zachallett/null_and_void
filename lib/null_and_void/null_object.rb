@@ -1,13 +1,7 @@
-require 'singleton'
-require 'null_and_void/stubbable'
-require 'null_and_void/convertible'
-require 'null_and_void/falsifiable'
+require 'null_and_void/nullified'
 
 module NullAndVoid
   class NullObject
-    include Singleton
-    include Stubbable
-    include Convertible
-    include Falsifiable
+    include ::NullAndVoid::Nullified
   end
 end
