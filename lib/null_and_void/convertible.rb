@@ -13,5 +13,9 @@ module NullAndVoid
     def to_r
       Rational(0)
     end
+
+    def to_a
+      Array.new
+    end
   end
 end

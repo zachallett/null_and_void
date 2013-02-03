@@ -25,4 +25,8 @@ describe NullAndVoid::Convertible do
     null_object.to_r.should be_a Rational
     null_object.to_r.should be_zero
   end
+
+  it 'is an empty Array when the attempt is made to convert it to an Array' do
+    null_object.to_a.should eql []
+  end
 end
