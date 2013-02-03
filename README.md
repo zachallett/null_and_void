@@ -126,13 +126,13 @@ NullUser.instance == User.new.as_null_object == User.as_null_object # => true
 ### Define Your Own Null Objects ##############################################
 
 When implementing a Null Object for a specific class that you own, simply
-include `NullAndVoid::NullObject` like so:
+include `NullAndVoid::Nullified` like so:
 
 ```ruby
-require 'null_and_void/null_object'
+require 'null_and_void/nullified'
 
 class NullUser
-  include NullAndVoid::NullObject
+  include NullAndVoid::Nullified
 
   def admin?
     false
