@@ -16,7 +16,7 @@ In the process of doing research to make sure I was implementing this gem the
 best way possible, I came across [an article by Avdi
 Grimm](http://devblog.avdi.org/2011/05/30/null-objects-and-falsiness). In the
 article Avdi brings up a lot of the same ideas I was implementing in my gem.
-Additionally, he had come up with some [other](#helpermethods)
+Additionally, he had come up with some [other](#helper-methods)
 [nicities](#maybies) that I hadn't thought of.
 
 <br/>
