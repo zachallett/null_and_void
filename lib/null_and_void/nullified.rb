@@ -7,7 +7,7 @@ require 'null_and_void/introspectable'
 module NullAndVoid
   module Nullified
     def self.included(base)
-      base.send(:include, ::NullAndVoid::Singleton)
+      base.send(:include, Singleton)
       base.send(:include, ::NullAndVoid::Stubbable)
       base.send(:include, ::NullAndVoid::Convertible)
       base.send(:include, ::NullAndVoid::Falsifiable)
