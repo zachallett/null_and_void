@@ -7,14 +7,16 @@ Null And Void
 
 Using the Null Object pattern in Ruby is rather easy so why create a gem?
 
-I found myself using the same implementation around the Null Object pattern and
-rather than keep reinventing the wheel, I decided to package it up as a gem.
+I found myself using the same implementation around the Null Object pattern over
+and over. Rather than duplicating the logic in every one of my projects,
+I decided to package it up as a gem.
 
-In the process of doing so, and doing more research to make sure I was
-implementing it the best way possible, I came across an article by [Avdi
-Grimm](http://devblog.avdi.org/2011/05/30/null-objects-and-falsiness) which was
-talking about implementing it similarly to how I was going about it but gave me
-some ideas for some [other nicities](#helpermethods) to add in as well.
+In the process of doing research to make sure I was implementing this gem the
+best way possible, I came across [an article by Avdi
+Grimm](http://devblog.avdi.org/2011/05/30/null-objects-and-falsiness). In the
+article Avdi brings up a lot of the same ideas I was implementing in my gem.
+Additionally, he had come up with some [other nicities](#helpermethods) that
+I hadn't thought of.
 
 <br/>
 <br/>
