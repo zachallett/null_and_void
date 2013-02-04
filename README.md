@@ -145,11 +145,12 @@ end
 
 ### Maybies ###################################################################
 
-Sometimes you don't have control over the API you're calling and rather than
-doing the sane thing by always returning the same type no matter what, instead
-it returns nils.
+Unfortunately when you're programming in the 'Real World &copy;" you don't
+always have control over the API you're using.  And sometimes, those APIs,
+rather than doing the sane thing and always returning the same type no matter
+what, instead return nils.
 
-When this happens, you could do this:
+In these situations, you could do this:
 
 ```ruby
 call_some_method_that_could_return_nils || NullAndVoid::NullObject.instance
