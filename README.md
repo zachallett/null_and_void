@@ -15,8 +15,8 @@ In the process of doing research to make sure I was implementing this gem the
 best way possible, I came across [an article by Avdi
 Grimm](http://devblog.avdi.org/2011/05/30/null-objects-and-falsiness). In the
 article Avdi brings up a lot of the same ideas I was implementing in my gem.
-Additionally, he had come up with some [other nicities](#helpermethods) that
-I hadn't thought of.
+Additionally, he had come up with some [other](#helpermethods)
+[nicities](#maybies) that I hadn't thought of.
 
 <br/>
 <br/>
@@ -142,7 +142,37 @@ class NullUser
 end
 ```
 
-### Include Into Your Objects (optional) ######################################
+### Maybies ###################################################################
+
+Sometimes you don't have control over the API you're calling and rather than
+doing the sane thing by always returning the same type no matter what, instead
+it returns nils.
+
+When this happens, you could do this:
+
+```ruby
+call_some_method_that_could_return_nils || NullAndVoid::NullObject.instance
+```
+
+Or instead, you can simply wrap the method call in `NullAndVoid::Maybe` and it
+will handle that for you. For example:
+
+```ruby
+NullAndVoid::Maybe(call_some_method_that_could_return_nils)
+```
+
+If you'd like to return a specific class of Null Object, you can pass it via an
+options hash like so:
+
+```ruby
+NullAndVoid::Maybe(call_some_method_that_could_return_nils,
+                   :as => NullMyCustomObject)
+```
+
+Of course at this point it's even more verbose than just using `||` but it's
+included for completeness.
+
+### Include Into Your Objects (Optional) ######################################
 
 You can add Null Object creation to your class by including
 `NullAndVoid::ModelSupport`.
