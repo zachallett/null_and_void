@@ -7,9 +7,10 @@ Null And Void
 
 Using the Null Object pattern in Ruby is rather easy so why create a gem?
 
-I found myself using the same implementation around the Null Object pattern over
-and over. Rather than duplicating the logic in every one of my projects,
-I decided to package it up as a gem.
+I found myself using the same implementation around the [Null Object
+pattern](https://en.wikipedia.org/wiki/Null_object_pattern#Ruby) over and over.
+Rather than duplicating the logic in every one of my projects, I decided to
+package it up as a gem.
 
 In the process of doing research to make sure I was implementing this gem the
 best way possible, I came across [an article by Avdi
