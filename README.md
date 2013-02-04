@@ -119,7 +119,7 @@ null_object.present?  # => false
 
 ### Singleton Implementation ##################################################
 
-`NullAndVoid::NullObject` is a singleton, all calls to an implementation of it
+`NullAndVoid::NullObject` is a singleton.  All calls to an implementation of it
 will result in the same object.  Therefore:
 
 ```ruby
