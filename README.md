@@ -153,26 +153,35 @@ what, instead return nils.
 In these situations, you could do this:
 
 ```ruby
-call_some_method_that_could_return_nils || NullAndVoid::NullObject.instance
+class Foo
+  def bar
+    call_some_method_that_could_return_nils || NullAndVoid::NullObject.instance
+  end
+end
 ```
 
-Or instead, you can simply wrap the method call in `NullAndVoid::Maybe` and it
-will handle that for you. For example:
+Or instead, you can simply mixin `NullAndVoid::Mayby` and it will handle that
+for you. For example:
 
 ```ruby
-NullAndVoid::Maybe(call_some_method_that_could_return_nils)
+class Foo
+  include NullAndVoid::Maybe
+
+  def bar
+    maybe(call_some_method_that_could_return_nils)
+  end
+end
 ```
 
-If you'd like to return a specific class of Null Object, you can pass it via an
-options hash like so:
+If you'd rather not mix it into your class, you can also just call it directly:
 
 ```ruby
-NullAndVoid::Maybe(call_some_method_that_could_return_nils,
-                   :as => NullMyCustomObject)
+class Foo
+  def bar
+    NullAndVoid.maybe(call_some_method_that_could_return_nils)
+  end
+end
 ```
-
-Of course at this point it's even more verbose than just using `||` but it's
-included for completeness.
 
 ### Include Into Your Objects (Optional) ######################################
 
