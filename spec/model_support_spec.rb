@@ -7,6 +7,7 @@ module FooBar
   end
 
   class NullMyNullableModel
+    include NullAndVoid::Nullified
   end
 end
 

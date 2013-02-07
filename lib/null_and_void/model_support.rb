@@ -10,7 +10,7 @@ module NullAndVoid
         null_object_base  = "Null#{base_path}"
         source_model_path = "#{module_path}::#{null_object_base}"
 
-        ActiveSupport::Inflector.constantize(source_model_path).new
+        ActiveSupport::Inflector.constantize(source_model_path).instance
       rescue NameError
         NullAndVoid::NullObject.instance
       end
