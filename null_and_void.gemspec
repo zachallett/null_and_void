@@ -31,5 +31,5 @@ Gem::Specification.new do |gem|
   gem.add_dependency                          'activesupport',      '~> 3.1'
 
   gem.add_development_dependency              'rspec',              '~> 2.12'
-  gem.add_development_dependency              'rspectacular',       '~> 0.7'
+  gem.add_development_dependency              'rspectacular',       '~> 0.11'
 end
