@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
 
   gem.authors           = %w{jfelchner}
   gem.email             = 'accounts+git@thekompanee.com'
-  gem.date              = Date.today
+  gem.date              = Time.now
   gem.homepage          = 'https://github.com/jfelchner/null_and_void'
 
   gem.summary           = %q{Easy Null Objects}
