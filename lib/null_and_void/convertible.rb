@@ -6,6 +6,10 @@ module NullAndVoid
       0
     end
 
+    def to_c
+      Complex(0)
+    end
+
     alias :to_int :to_i
 
     def to_f

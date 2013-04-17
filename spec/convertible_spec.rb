@@ -25,6 +25,11 @@ describe NullAndVoid::Convertible do
     null_object.to_int.should be_zero
   end
 
+  it 'is zero when the attempt is made to convert it to a Complex number' do
+    null_object.to_c.should be_a Complex
+    null_object.to_c.should be_zero
+  end
+
   it 'is zero when the attempt is made to convert it to a Float' do
     null_object.to_f.should be_a Float
     null_object.to_f.should be_zero
