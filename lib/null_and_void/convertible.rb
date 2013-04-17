@@ -16,6 +16,10 @@ module NullAndVoid
       0.0
     end
 
+    def rationalize(*args)
+      Rational(0)
+    end
+
     def to_r
       Rational(0)
     end

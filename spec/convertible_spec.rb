@@ -38,6 +38,9 @@ describe NullAndVoid::Convertible do
   it 'is zero when the attempt is made to convert it to a Rational' do
     null_object.to_r.should be_a Rational
     null_object.to_r.should be_zero
+
+    null_object.rationalize.should be_a Rational
+    null_object.rationalize.should be_zero
   end
 
   it 'is an empty Array when the attempt is made to convert it to an Array' do
