@@ -3,7 +3,7 @@ Null And Void
 
 **Create Null Objects with Ease**
 
-<img src="http://cdn.memegenerator.net/instances/300x/34275719.jpg" align="right" />
+<img src="https://dl.dropbox.com/s/3vro4yd2vsa5xga/bad-luck-brian-null-object.jpg" align="right" />
 
 Using the Null Object pattern in Ruby is rather easy so why create a gem?
 
