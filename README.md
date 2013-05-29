@@ -223,7 +223,7 @@ NullUser.instance
 Other Approaches
 ------
 
-If you'd like to try a more builder-centric approach to Null Object's, check out:
+If you'd like to try a more builder-centric approach to Null Objects, check out:
 
 [Naught](http://github.com/avdi/naught)
 
