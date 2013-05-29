@@ -220,6 +220,13 @@ Will return:
 NullUser.instance
 ```
 
+Other Approaches
+------
+
+If you'd like to try a more builder-centric approach to Null Object's, check out:
+
+[Naught](http://github.com/avdi/naught)
+
 Issues
 ------
 
