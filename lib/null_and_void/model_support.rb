@@ -1,16 +1,16 @@
-require 'active_support/inflector/methods'
+require 'null_and_void/inflections'
 require 'null_and_void/null_object'
 
 module NullAndVoid
   module ModelSupport
     module ClassMethods
       def as_null_object
-        base_path         = ActiveSupport::Inflector.demodulize(self.name)
-        module_path       = ActiveSupport::Inflector.deconstantize(self.name)
+        base_path         = NullAndVoid::Inflections.demodulize(self.name)
+        module_path       = NullAndVoid::Inflections.deconstantize(self.name)
         null_object_base  = "Null#{base_path}"
         source_model_path = "#{module_path}::#{null_object_base}"
 
-        ActiveSupport::Inflector.constantize(source_model_path).instance
+        NullAndVoid::Inflections.constantize(source_model_path).instance
       rescue NameError
         NullAndVoid::NullObject.instance
       end

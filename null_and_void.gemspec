@@ -28,8 +28,6 @@ Gem::Specification.new do |gem|
   gem.test_files        = Dir['{test,spec,features}/**/*']
   gem.require_paths     = ['lib']
 
-  gem.add_dependency                          'activesupport',      '~> 3.1'
-
   gem.add_development_dependency              'rspec',              '~> 2.12'
   gem.add_development_dependency              'rspectacular',       '~> 0.11'
 end
