@@ -22,18 +22,18 @@ describe NullAndVoid::Nullified do
   end
 
   it 'handles undefined methods' do
-    null_object.foobar.should eql NullWidget.instance
+    expect(null_object.foobar).to eql NullWidget.instance
   end
 
   it 'handles conversions' do
-    null_object.to_a.should eql []
+    expect(null_object.to_a).to eql []
   end
 
   it 'is falsifiable' do
-    (!!null_object).should be_false
+    expect((!!null_object)).to eql false
   end
 
   it 'can implement its own methods' do
-    null_object.my_null_object_method.should eql 'i am null'
+    expect(null_object.my_null_object_method).to eql 'i am null'
   end
 end

@@ -9,6 +9,6 @@ describe NullAndVoid::Stubbable do
   let(:null_object) { NullObject.new }
 
   it 'returns itself for all unknown method calls' do
-    null_object.foobar.should eql null_object
+    expect(null_object.foobar).to eql null_object
   end
 end

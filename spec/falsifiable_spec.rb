@@ -9,18 +9,18 @@ describe NullAndVoid::Falsifiable do
   let(:null_object) { NullObject.new }
 
   it 'can be double inverted to be false' do
-    (!!null_object).should be_false
+    expect((!!null_object)).to eql false
   end
 
   it 'is blank' do
-    null_object.should be_blank
+    expect(null_object).to be_blank
   end
 
   it 'is nil' do
-    null_object.should be_nil
+    expect(null_object).to be_nil
   end
 
   it 'is not present' do
-    null_object.should_not be_present
+    expect(null_object).not_to be_present
   end
 end
