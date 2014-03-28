@@ -1,6 +1,8 @@
 Null And Void
 ================================
 
+[![Build Status](https://secure.travis-ci.org/jfelchner/null_and_void.png?branch=master)](http://travis-ci.org/jfelchner/null_and_void) [![Code Climate](https://codeclimate.com/github/jfelchner/null_and_void.png)](https://codeclimate.com/github/jfelchner/null_and_void) [![Code Climate](https://codeclimate.com/github/jfelchner/null_and_void/coverage.png)](https://codeclimate.com/github/jfelchner/null_and_void)
+
 **Create Null Objects with Ease**
 
 <img src="https://dl.dropbox.com/s/3vro4yd2vsa5xga/bad-luck-brian-null-object.jpg" align="right" />
