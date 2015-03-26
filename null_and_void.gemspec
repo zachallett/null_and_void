@@ -4,31 +4,20 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'null_and_void/version'
 
 Gem::Specification.new do |gem|
-  gem.rubygems_version  = '1.3.5'
-
   gem.name              = 'null_and_void'
-  gem.rubyforge_project = 'null_and_void'
-
   gem.version           = NullAndVoid::VERSION
-  gem.platform          = Gem::Platform::RUBY
-
   gem.authors           = %w{jfelchner}
   gem.email             = 'accounts+git@thekompanee.com'
-  gem.date              = Time.now
-  gem.homepage          = 'https://github.com/jfelchner/null_and_void'
-
   gem.summary           = %q{Easy Null Objects}
   gem.description       = %q{Makes generating Null Objects easy.}
+  gem.homepage          = 'https://github.com/jfelchner/null_and_void'
 
-  gem.rdoc_options      = ['--charset = UTF-8']
-  gem.extra_rdoc_files  = %w{README.md}
-
-  gem.executables       = Dir['{bin}/**/*']
-  gem.files             = Dir['{app,config,db,lib}/**/*'] + %w{Rakefile README.md}
+  gem.executables       = Dir['{bin}/**/*'].map    { |bin| File.basename(bin) }.
+                                            reject { |bin| %w{rails rspec rake setup deploy}.include? bin }
+  gem.files             = Dir['{app,config,db,lib,templates}/**/*'] + %w{Rakefile README.md LICENSE}
   gem.test_files        = Dir['{test,spec,features}/**/*']
   gem.require_paths     = ['lib']
 
-  gem.add_development_dependency              'rspec',                        '~> 3.0.beta'
-  gem.add_development_dependency              'rspectacular',                 '~> 0.21.6'
-  gem.add_development_dependency              'codeclimate-test-reporter',    '~> 0.3.0'
+  gem.add_development_dependency 'rspec',        '~> 3.1'
+  gem.add_development_dependency 'rspectacular', '~> 0.21.6'
 end
