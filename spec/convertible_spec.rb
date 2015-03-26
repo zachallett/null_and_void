@@ -49,7 +49,7 @@ describe NullAndVoid::Convertible do
   end
 
   it 'is an empty Hash when the attempt is made to convert it to an Hash' do
-    expect(null_object.to_hash).to eql Hash.new
+    expect(null_object.to_hash).to eql({})
   end
 
   it 'is an empty String when the attempt is made to convert it to HTML' do
@@ -68,7 +68,9 @@ describe NullAndVoid::Convertible do
     expect(null_object.to_s).to eql ''
   end
 
-  it 'is the class the Null Object is based on when the attempt is made to convert it to a value object' do
+  it 'is the class the Null Object is based on when the attempt is made to convert ' \
+     'it to a value object' do
+
     expect(null_object.to_model).to be_a FooBar::Object
   end
 

@@ -8,9 +8,11 @@ end
 describe NullAndVoid::Falsifiable do
   let(:null_object) { NullObject.new }
 
+  # rubocop:disable Style/DoubleNegation
   it 'can be double inverted to be false' do
-    expect((!!null_object)).to eql false
+    expect(!!null_object).to eql false
   end
+  # rubocop:enable Style/DoubleNegation
 
   it 'is blank' do
     expect(null_object).to be_blank

@@ -1,9 +1,11 @@
+# rubocop:disable Lint/AssignmentInCondition, Metrics/CyclomaticComplexity
+# rubocop:disable Metrics/LineLength, Metrics/PerceivedComplexity, Style/EachWithObject
 module    NullAndVoid
 module    Inflections
   def self.demodulize(path)
     path = path.to_s
     if i = path.rindex('::')
-      path[(i+2)..-1]
+      path[(i + 2)..-1]
     else
       path
     end
@@ -22,7 +24,7 @@ module    Inflections
     # Remove the first blank element in case of '::ClassName' notation.
     names.shift if names.size > 1 && names.first.empty?
 
-    names.inject(Object) do |constant, name|
+    names.reduce(Object) do |constant, name|
       if constant == Object
         constant.const_get(name)
       else
@@ -32,7 +34,7 @@ module    Inflections
 
         # Go down the ancestors to check it it's owned
         # directly before we reach Object or the end of ancestors.
-        constant = constant.ancestors.inject do |const, ancestor|
+        constant = constant.ancestors.reduce do |const, ancestor|
           break const    if ancestor == Object
           break ancestor if ancestor.const_defined?(name, false)
           const
@@ -45,3 +47,5 @@ module    Inflections
   end
 end
 end
+# rubocop:enable Lint/AssignmentInCondition, Metrics/CyclomaticComplexity
+# rubocop:enable Metrics/LineLength, Metrics/PerceivedComplexity, Style/EachWithObject

@@ -13,6 +13,6 @@ describe NullAndVoid::Introspectable do
   end
 
   it 'can inspect itself' do
-    expect(null_object.inspect).to match /\A#<MyNullObject:0x[a-f0-9]{4,12}>\z/
+    expect(null_object.inspect).to match(/\A#<MyNullObject:0x[a-f0-9]{4,12}>\z/)
   end
 end

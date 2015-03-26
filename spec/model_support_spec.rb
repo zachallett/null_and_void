@@ -26,7 +26,9 @@ describe NullAndVoid::ModelSupport do
     expect(model.class.as_null_object).to be_a FooBar::NullMyNullableModel
   end
 
-  it 'can convert a model into a generic Null Object a model-specific Null Object does not exist' do
+  it 'can convert a model into a generic Null Object a model-specific Null Object ' \
+     'does not exist' do
+
     expect(NonNullableModel.as_null_object).to be_a NullAndVoid::NullObject
   end
 end

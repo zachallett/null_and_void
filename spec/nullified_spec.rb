@@ -29,9 +29,11 @@ describe NullAndVoid::Nullified do
     expect(null_object.to_a).to eql []
   end
 
+  # rubocop:disable Style/DoubleNegation
   it 'is falsifiable' do
-    expect((!!null_object)).to eql false
+    expect(!!null_object).to eql false
   end
+  # rubocop:enable Style/DoubleNegation
 
   it 'can implement its own methods' do
     expect(null_object.my_null_object_method).to eql 'i am null'
