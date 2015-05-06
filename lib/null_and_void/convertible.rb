@@ -38,7 +38,7 @@ module NullAndVoid
       ''
     end
 
-    def to_json
+    def to_json(*)
       'null'
     end
 

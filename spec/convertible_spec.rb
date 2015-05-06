@@ -57,7 +57,7 @@ describe NullAndVoid::Convertible do
   end
 
   it 'is an empty String when the attempt is made to convert it to JSON' do
-    expect(null_object.to_json).to eql 'null'
+    expect(null_object.to_json(:foo)).to eql 'null'
   end
 
   it 'is an empty String when the attempt is made to convert it to XML' do
