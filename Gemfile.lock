@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    null_and_void (1.4.0)
+    null_and_void (1.5.0)
 
 GEM
   remote: https://rubygems.org/
