@@ -1,5 +1,9 @@
 module NullAndVoid
   module Persistable
+    def id
+      nil
+    end
+
     def readonly?
       true
     end
