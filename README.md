@@ -162,7 +162,7 @@ class Foo
 end
 ```
 
-Or instead, you can simply mixin `NullAndVoid::Mayby` and it will handle that
+Or instead, you can simply mixin `NullAndVoid::Maybe` and it will handle that
 for you. For example:
 
 ```ruby
